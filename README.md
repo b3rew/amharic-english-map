@@ -5,7 +5,7 @@ Map English characters to Amharic
 Character Mapping includes
 1. Punctuations like ፡ ። ፣ ፥ ፦ ፧ ፨
 2. Numbers ፩ ፪ ፫ ፬
-3. special chars 
+3. special chars  ቘ ፙ ፚ ጟ
 4. other characters ሀ - ፐ (obviously ▀͡ ̯ʖ▀)
 
 ### Installation
