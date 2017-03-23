@@ -1,0 +1,27 @@
+{
+  "name": "amharic-english-map",
+  "version": "0.0.9",
+  "description": "map english characters to amharic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3rew/amharic-english-map.git"
+  },
+  "keywords": [
+    "map",
+    "english",
+    "amharic"
+  ],
+  "author": "b3rew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b3rew/amharic-english-map/issues"
+  },
+  "homepage": "https://github.com/b3rew/amharic-english-map#readme",
+  "dependencies": {
+    "geezer": "^1.0.3"
+  }
+}

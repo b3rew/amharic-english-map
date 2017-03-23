@@ -1,3 +1,5 @@
+var geezer = require('geezer');
+
 var translate = function (car) {
 		car = car.replace(/ä/g, "e");
 		car = car.replace(/â/g, "e");
@@ -23,7 +25,6 @@ var translate = function (car) {
 		car = car.replace(/ህo/g, "ሆ");
 		car = car.replace(/ሃa/g, "ዏ");
 
-		// moodif hh par x 
 		car = car.replace(/[ẖxX]/g, "ኅ");
 		car = car.replace(/ኅe/g, "ኀ");
 		car = car.replace(/ኅu/g, "ኁ");
@@ -99,7 +100,6 @@ var translate = function (car) {
 		car = car.replace(/ዝo/g, "ዞ");
 		car = car.replace(/ዛa/g, "ዟ");
 
-		// modif ss remplacé par sz
 		car = car.replace(/ś/g, "ሥ");
 		car = car.replace(/ስዝ/g, "ሥ");
 		car = car.replace(/ሥe/g, "ሠ");
@@ -142,7 +142,6 @@ var translate = function (car) {
 		car = car.replace(/ቈe/g, "ቌ");
 		car = car.replace(/ቍé/g, "ቌ");
 
-		//qh
 		car = car.replace(/ቅህ/g, "ቕ");
 		car = car.replace(/ቕe/g, "ቐ");
 		car = car.replace(/ቕu/g, "ቑ");
@@ -436,10 +435,6 @@ var translate = function (car) {
 		car = car.replace(/ፍo/g, "ፎ");
 		car = car.replace(/ፋa/g, "ፏ");
 
-		// non identif
-		//car = car.replace(/ፍY/g, "ፚ");
-		//car = car.replace(/ፚa/g, "ፚ");
-
 		car = car.replace(/p/g, "ፕ");
 		car = car.replace(/ፕe/g, "ፐ");
 		car = car.replace(/ፕu/g, "ፑ");
@@ -450,7 +445,6 @@ var translate = function (car) {
 		car = car.replace(/ፕo/g, "ፖ");
 		car = car.replace(/ፓa/g, "ፗ");
 
-		// pharyngale 
 		car = car.replace(/ʿ/g, "ዕ");
 		car = car.replace(/\"/g, "ዕ");
 		car = car.replace(/ዕe/g, "ዐ");
@@ -469,7 +463,6 @@ var translate = function (car) {
 		car = car.replace(/É/g, "ዔ");
 		car = car.replace(/O/g, "ዖ");
 
-		// glottales 
 		car = car.replace(/ʾ/g, "እ");
 		car = car.replace(/\'/g, "እ");
 		car = car.replace(/እe/g, "አ");
@@ -489,8 +482,7 @@ var translate = function (car) {
 		car = car.replace(/é/g, "ኤ");
 		car = car.replace(/o/g, "ኦ");
 		car = car.replace(/ኣኣ/g, "ኧ");
-
-		//ponctuation 
+ 
 		car = car.replace(/-/g, "፡");
 		car = car.replace(/\./g, "።");
 		car = car.replace(/\,/g, "፣");
@@ -500,29 +492,9 @@ var translate = function (car) {
 		car = car.replace(/\?/g, "፧");
 		car = car.replace(/\//g, "፨");
 
-		car = car.replace(/1/g, "፩");
-		car = car.replace(/2/g, "፪");
-		car = car.replace(/3/g, "፫");
-		car = car.replace(/4/g, "፬");
-		car = car.replace(/5/g, "፭");
-		car = car.replace(/6/g, "፮");
-		car = car.replace(/7/g, "፯");
-		car = car.replace(/8/g, "፰");
-		car = car.replace(/9/g, "፱");
-		car = car.replace(/፩0/g, "፲");
-		car = car.replace(/፪0/g, "፳");
-		car = car.replace(/፫0/g, "፴");
-		car = car.replace(/፬0/g, "፵");
-		car = car.replace(/፭0/g, "፶");
-		car = car.replace(/፮0/g, "፷");
-		car = car.replace(/፯0/g, "፸");
-		car = car.replace(/፰0/g, "፹");
-		car = car.replace(/፱0/g, "፺");
-		car = car.replace(/፲0/g, "፻");
-		car = car.replace(/፳0/g, "፪፻");
-		car = car.replace(/፺0/g, "፱፻");
-		car = car.replace(/፻0/g, "፲፻");
-		car = car.replace(/፲፻0/g, "፼");
+		car = car.replace(/^[0-9]*$/, function (match, capture) {
+			return geezer(match);
+		});
 
 		return car;
 }
