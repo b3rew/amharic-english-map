@@ -21,3 +21,7 @@ const aem = require('amharic-english-map');
 const amharic = aem('yambulee'); // returns ያምቡሌ
 
 ```
+
+### Required Packages
+
+* [Geezer](https://github.com/moe-szyslak/Geezer) to convert numbers to geez format
